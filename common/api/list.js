@@ -6,7 +6,7 @@ export const get_label=(data)=>{
 	})
 	}
 	
-	export const get_list=(data)=>{
+	export const get_article=(data)=>{
 		return $http({
 			url:'http://localhost:8888/article/get_list',
 			data

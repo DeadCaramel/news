@@ -34,7 +34,10 @@
 			getLabel(){
 				this.$api.get_label().then((res)=>{
 					const {data}=res
-					this.tabList=res.data
+					data.unshift({
+						name:"全部"
+					})
+					this.tabList=data
 				})
 			},
 			change(current){
