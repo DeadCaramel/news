@@ -3,10 +3,14 @@ export default function $http(options){
 		url,
 		data
 	}=options
+	const dataObject={
+		user_id:'640eb8e60c801c2ac923dabc',
+		...data
+	}
 	return new Promise((resolve,reject)=>{
 		uni.request({
 			url:url,
-			data:data
+			data:dataObject
 		}).then((res)=>{
 			if(res.statusCode===200){
 				resolve(res.data)

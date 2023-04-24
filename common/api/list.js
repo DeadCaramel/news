@@ -12,3 +12,10 @@ export const get_label=(data)=>{
 			data
 		})
 	}
+	
+	export const update_like=(data)=>{
+		return $http({
+			url:'http://localhost:8888/user/update_like',
+			data
+		})
+	}
