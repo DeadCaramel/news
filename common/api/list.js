@@ -19,3 +19,10 @@ export const get_label=(data)=>{
 			data
 		})
 	}
+	
+	export const get_article_search=(data)=>{
+		return $http({
+			url:'http://localhost:8888/article/get_search',
+			data
+		})
+	}

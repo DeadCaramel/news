@@ -90,7 +90,7 @@
 		},
 		methods:{
 			open(){
-				console.log("open");
+				this.$emit('click',this.item)
 			}
 		}
 	}

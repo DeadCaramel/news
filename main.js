@@ -1,5 +1,6 @@
 import App from './App'
 import api from './common/api'
+import store from '@/store'
 Vue.prototype.$api=api
 // #ifndef VUE3
 import Vue from 'vue'
@@ -35,6 +36,7 @@ try {
 } catch (error) { }
 
 const app = new Vue({
+	store,
   ...App
 })
 app.$mount()
