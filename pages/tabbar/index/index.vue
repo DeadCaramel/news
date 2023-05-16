@@ -32,7 +32,9 @@
 				this.activeIndex=index
 			},
 			getLabel(){
-				this.$api.get_label().then((res)=>{
+				this.$api.get_label({
+					type:"all"
+				}).then((res)=>{
 					const {data}=res
 					data.unshift({
 						name:"全部"
