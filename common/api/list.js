@@ -6,6 +6,13 @@ export const get_label=(data)=>{
 	})
 	}
 	
+	export const update_label=(data)=>{
+		return $http({
+			url:'http://localhost:8888/label/update',
+			data
+		})
+		}
+	
 	export const get_article=(data)=>{
 		return $http({
 			url:'http://localhost:8888/article/get_list',
@@ -26,3 +33,4 @@ export const get_label=(data)=>{
 			data
 		})
 	}
+	

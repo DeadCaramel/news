@@ -25,6 +25,13 @@
 			}
 		},
 		onLoad() {
+			uni.$on('labelChange',(res)=>{
+				this.tabList=[]
+				this.tabIndex=0
+				thiamin.activeIndex=0
+				this.getLabel()
+				console.log("a");
+			})
 			this.getLabel()
 		},
 		methods: {
@@ -36,10 +43,11 @@
 					type:"all"
 				}).then((res)=>{
 					const {data}=res
-					data.unshift({
+					var userData=data.filter(item=>item.current);
+					userData.unshift({
 						name:"全部"
 					})
-					this.tabList=data
+					this.tabList=userData
 				})
 			},
 			change(current){
